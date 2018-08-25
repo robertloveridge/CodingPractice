@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use DBI;
+use Carp;
 use File::Temp;
 use File::Copy;
 use Text::CSV_XS;
@@ -20,6 +21,9 @@ GetOptions (
   "output_path=s" => \$output_path,
   "output_name=s" => \$output_name)
   or die("Error in command line arguments\n");
+
+# only allow SELECT statements
+croak "Not a SELECT: '$sql'" unless ( $sql =~ m{ ^ [ ]* SELECT }ixms );
 
 my $dsn = sprintf("dbi:SQLite:dbname=%s",$db_name);
 
