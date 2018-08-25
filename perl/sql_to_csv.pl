@@ -10,10 +10,10 @@ use File::Copy;
 use Text::CSV_XS;
 use Getopt::Long;
 
-my $db_name = q{transactions.db};
-my $sql = q{SELECT * FROM transactions};
+my $db_name = q{chinook.db};
+my $sql = q{SELECT * FROM employees};
 my $output_path = q{/Users/rob/Documents};
-my $output_name = q{transactions.csv};
+my $output_name = q{employees.csv};
 
 GetOptions (
   "db_name=s" => \$db_name,
