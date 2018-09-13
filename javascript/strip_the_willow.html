@@ -1,0 +1,137 @@
+<!doctype html public "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Strip The Willow</title>
+	<style type="text/css">
+		body{
+			font-family:		sans-serif;
+			font-size:			76%;
+			background-color:	white;
+		}
+		.game{
+			margin: 0;
+			padding: 0;
+			overflow: auto;
+		}
+		.game li{
+			width: 100px;
+			float: left;
+			margin: 0;
+			padding: 10px;
+			margin-right: 5px;
+			border-radius: 20px;
+			background: rgb(180, 19, 65);
+			list-style-type: none;
+			font-size: 120px;
+			line-height: 1;
+			text-align: center;
+			cursor: pointer;
+			color: rgb(238, 218, 211);
+		}
+		button{
+			display: block;
+			background: rgb(0, 93, 136);
+			font-size: 60px;
+			color: rgb(238, 218, 211);
+			border: none;
+			border-radius: 20px;
+			padding: 10px;
+			margin-top: 50px;
+		}
+	</style>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		var StripTheWillow = (function($){
+
+			$(function(){
+				var game = new Game();
+				game.render(document.body);
+			});
+
+			var Game = function(container){
+				this.state = [1, 1, 1, 0, -1, -1, -1];
+				this.oldStates = [];
+			}
+
+			Game.prototype.render = function(into){
+				var list = document.createElement('ul');
+				list.className = 'game';
+
+				var self = this;
+				$.each(this.state, function(index, item){
+					var button = document.createElement('li');
+					button.id = 'game-button-' + index;
+					$(button).click(function(){
+						self.move(index);
+					});
+					list.appendChild(button);
+				});
+
+				this.list = list;
+				$(into).append(list);
+
+				var undo = document.createElement('button');
+				undo.innerHTML = 'Undo';
+				$(undo).click(function(){
+					var oldState = self.oldStates.pop();
+					if (oldState){
+						self.state = oldState;
+						self.update();
+					}
+				})
+				$(into).append(undo);
+
+				this.update();
+			}
+
+			Game.prototype.update = function(state){
+				if (state){
+					this.oldStates.push(this.state);
+					this.state = state;
+				}
+
+				var self = this;
+				$.each(this.state, function(index, item){
+					var button = $(self.list).find('#game-button-' + index);
+
+					var content
+						= item > 0	? '&gt;' 
+						: item < 0	? '&lt;'
+						: '&nbsp;';
+
+					$(button).html(content);
+				});
+			}
+
+			Game.prototype.error = function(error){
+				if (window.console && console.log) console.log(error);
+			}
+
+			Game.prototype.move = function(i){
+				var state = this.state.slice();
+
+				if (!state[i]) return this.error('Nothing to move');
+				
+				for (var j=1; j<=2; j++){
+					var nextIndex = i + state[i] * j;
+					if (state[i] && !state[nextIndex] && nextIndex < state.length && nextIndex >= 0){
+						state[nextIndex] = state[i];
+						state[i] = 0;
+						return this.update(state);
+					}
+				}
+
+				this.error('Cannot move that');
+			}			
+			
+		})(jQuery);
+	</script>
+</head>
+<body>
+    <!--Solution: 3,5,6,4,2,1,3,5,7,6,4,2,3,5-->
+    <h1>Strip The Willow</h1>
+    <p>Objective is to get all of the right facing arrows to the right hand side, the left facing arrows to the left hand side.</p>
+</body>
+</html>

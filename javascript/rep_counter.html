@@ -1,0 +1,31 @@
+<!doctype html public "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rep Counter</title>
+    <style>
+        p {
+            text-align: center;
+            font-size: 60px;
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <p id="reps"></p>
+    <script>
+    // Set the reps we're aiming for
+    var repCount = 10;
+
+    // Update the count down every 2 seconds
+    var x = setInterval(function() {
+        repCount--;
+        document.getElementById("reps").innerHTML = repCount;
+        if (repCount < 0) {
+            clearInterval(x);
+            document.getElementById("reps").innerHTML = "End of Session";
+        }
+    }, 2000);
+    </script>
+</body>
+</html>
