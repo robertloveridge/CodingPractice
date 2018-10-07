@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome, for stars -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="sticky_footer.css" rel="stylesheet">
+
+    <style>
+        input.star {
+            border: 0;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            position: absolute !important;
+            clip: rect(1px 1px 1px 1px);
+            clip: rect(1px, 1px, 1px, 1px);
+            opacity: 0;
+        }
+
+        label.star {
+            position: relative;
+            float: right;
+            color: #C8C8C8;
+        }
+
+        label.star:before {
+            margin: 5px;
+            content: "\f005";
+            font-family: FontAwesome;
+            display: inline-block;
+            font-size: 1.5em;
+            color: #ccc;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        input.star:checked ~ label.star:before {
+            color: #FFC107;
+        }
+
+        label.star:hover ~ label.star:before {
+            color: #ffdb70;
+        }
+
+        label.star:hover:before {
+            color: #FFC107;
+        }
+    </style>
+
+    <title>Feedback</title>
+  </head>
+  <body>
+    <main role="main" class="container">
+        <h1 class="mt-5">Feedback</h1>
+        <p class="lead">Please rate your experience with the team.</p>
+        
+        <input class="star" type="checkbox" id="st1" value="1">
+        <label class="star" for="st1"></label>
+        <input class="star" type="checkbox" id="st2" value="2">
+        <label class="star" for="st2"></label>
+        <input class="star" type="checkbox" id="st3" value="3">
+        <label class="star" for="st3"></label>
+        <input class="star" type="checkbox" id="st4" value="4">
+        <label class="star" for="st4"></label>
+        <input class="star" type="checkbox" id="st5" value="5">
+        <label class="star" for="st5"></label>
+
+        <div class="form-group">
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary">Send Feedback</button>
+    </main>
+      
+    <footer class="footer">
+    <div class="container">
+        <span class="text-muted">Robert Loveridge.</span>
+    </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
