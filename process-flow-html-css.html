@@ -1,0 +1,126 @@
+
+<style>
+body{
+	font-family: sans-serif;
+	font-size: .9em;
+}
+ul.p-flow-wf,
+.p-flow-wf ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul.p-flow-wf > li{
+	display: inline-block;
+	vertical-align: middle;
+}
+ul.p-flow-wf .p-flow-wf-item{
+	width: 80px;
+	background: #3399cc;
+	padding: 15px;
+	margin: 25px 10px;
+	text-align: center;
+	color: white;
+	border-radius: 3px;
+	position: relative;
+	display: block;
+}
+ul.p-flow-wf a.p-flow-wf-item{
+	text-decoration: underline;
+	border: none;
+}
+ul.p-flow-wf a.p-flow-wf-item:hover{
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), inset 0 0 0 100px rgba(255, 255, 255, 0.05), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+ul.p-flow-wf .p-flow-wf-item.p-flow-wf-pm{
+	background-color: #80C1C0;
+}
+ul.p-flow-wf .p-flow-wf-item svg{
+	position: absolute;
+	width: 25px;
+	opacity: 0.2;
+}
+ul.p-flow-wf .p-flow-wf-item svg.primary-path{
+	opacity: 0.7;
+}
+ul.p-flow-wf .p-flow-wf-item .p-flow-arrow-right{
+	right: -25px;
+	top: 50%;
+	margin-top: -10px;
+}
+ul.p-flow-wf .p-flow-wf-item .p-flow-arrow-left{
+	left: -25px;
+	top: 50%;
+	margin-top: -10px;
+}
+ul.p-flow-wf .p-flow-wf-item .p-flow-arrow-down{
+	bottom: -25px;
+	left: 50%;
+	margin-left: -8px;
+}
+ul.p-flow-wf .p-flow-wf-item .p-flow-arrow-up{
+	top: -25px;
+	left: 50%;
+	margin-left: -8px;
+}
+ul.p-flow-wf .p-flow-wf-item .p-flow-arrow-up-right{
+	top: -43px;
+	right: -25px;
+	width: auto;
+	margin-left: -10px;
+}
+ul.p-flow-wf .p-flow-wf-item .p-flow-arrow-down-right{
+	bottom: -78px;
+	right: -25px;
+	width: auto;
+	margin-left: -10px;
+}
+</style>
+
+<ul class="p-flow-wf">
+	<svg style="height:0; width:0;" viewBox="0 0 0 0">
+		<defs>
+   			<marker id="arrowhead" markerWidth="2.5" markerHeight="5" refX="0" refY="2.5" orient="auto">
+				<polygon points="0 0, 2.5 2.5, 0 5" />
+			</marker>
+		</defs>
+	</svg>
+	<li style="vertical-align: bottom">
+		<a href="#" class="p-flow-wf-item" style="background:#F77043">
+			Triage
+			<svg class="p-flow-arrow-right primary-path" viewbox="0 0 50 50" width="25" height="25"><line x1="0" y1="20" x2="30" y2="20" stroke-width="8" stroke="black" marker-end="url(#arrowhead)"></svg>
+			<svg class="p-flow-arrow-down" viewbox="0 0 50 50" width="25" height="25"><line x1="20" y1="0" x2="20" y2="30" stroke-width="8" stroke="black" marker-end="url(#arrowhead)"></svg>
+			<svg class="p-flow-arrow-up-right" viewbox="0 0 50 200" width="25" height="100"><polyline points="0,110 15,110 15,20 30,20" stroke-width="8" stroke="black" fill="transparent" marker-end="url(#arrowhead)"></svg>
+			<svg class="p-flow-arrow-down-right" viewbox="0 0 50 200" width="25" height="100"><polyline points="0,20 15,20 15,110 30,110" stroke-width="8" stroke="black" fill="transparent" marker-end="url(#arrowhead)"></svg>
+		</a>
+		<ul>
+			<li><a href="#" class="p-flow-wf-item" style="background:#C24444">Rejected</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="#" class="p-flow-wf-item p-flow-wf-pm">
+			On hold
+			<svg class="p-flow-arrow-down" viewbox="0 0 50 50" width="25" height="25"><line x1="20" y1="0" x2="20" y2="30" stroke-width="8" stroke="black" marker-end="url(#arrowhead)"></svg>
+		</a>
+		<a href="#" class="p-flow-wf-item" style="background:#EEB624">
+			Approved
+			<svg class="p-flow-arrow-right primary-path" viewbox="0 0 50 50" width="25" height="25"><line x1="0" y1="20" x2="30" y2="20" stroke-width="8" stroke="black" marker-end="url(#arrowhead)"></svg>
+		</a>
+		<ul>
+			<li>
+				<a href="#" class="p-flow-wf-item p-flow-wf-pm">
+					Scoping
+					<svg class="p-flow-arrow-up" viewbox="0 0 50 50" width="25" height="25"><line x1="20" y1="60" x2="20" y2="20" stroke-width="8" stroke="black" marker-end="url(#arrowhead)"></svg>
+					<svg class="p-flow-arrow-left" viewbox="0 0 50 50" width="25" height="25"><line x1="60" y1="20" x2="20" y2="20" stroke-width="8" stroke="black" marker-end="url(#arrowhead)"></svg>
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a href="#" class="p-flow-wf-item" style="background:#8DA709">
+			Assigned
+			<svg class="p-flow-arrow-right primary-path" viewbox="0 0 50 50" width="25" height="25"><line x1="0" y1="20" x2="30" y2="20" stroke-width="8" stroke="black" marker-end="url(#arrowhead)"></svg>
+		</a>
+	</li>
+	<li><a href="#" class="p-flow-wf-item" style="background:#055661">Completed</a></li>
+</ul>
