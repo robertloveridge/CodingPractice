@@ -1,0 +1,12 @@
+{
+  "items": {
+    "Customers.csv": {
+      "files": "customers_*.csv",
+      "columns": [ "CustID", "FullName", "EmailAddr", "JoinDate" ]
+    },
+    "Transactions.csv": {
+      "files": "transactions_*.csv",
+      "columns": [ "TxnID", "CustID", "TxnDate", "Amount" ]
+    }
+  }
+}
