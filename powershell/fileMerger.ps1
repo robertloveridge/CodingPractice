@@ -51,10 +51,12 @@ foreach ($outputName in $items.PSObject.Properties.Name) {
 
     if ($allRows.Count -gt 0) {
         Write-Host "  Writing output: $outputName"
-        $allRows | Export-Csv -Path $outputName -NoTypeInformation -Force
+        # PowerShell 7.2.0+ needed for UseQuotes
+        $allRows | Export-Csv -UseQuotes AsNeeded -Path $outputName -NoTypeInformation -Force
     } else {
         Write-Warning "No valid rows to export for $outputName"
     }
 }
 
 Write-Host "`nProcessing complete."
+
