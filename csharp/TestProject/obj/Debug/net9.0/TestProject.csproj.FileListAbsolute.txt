@@ -1,0 +1,15 @@
+/Users/rob/Documents/Programming/CodingPractice/csharp/TestProject/bin/Debug/net9.0/TestProject
+/Users/rob/Documents/Programming/CodingPractice/csharp/TestProject/bin/Debug/net9.0/TestProject.deps.json
+/Users/rob/Documents/Programming/CodingPractice/csharp/TestProject/bin/Debug/net9.0/TestProject.runtimeconfig.json
+/Users/rob/Documents/Programming/CodingPractice/csharp/TestProject/bin/Debug/net9.0/TestProject.dll
+/Users/rob/Documents/Programming/CodingPractice/csharp/TestProject/bin/Debug/net9.0/TestProject.pdb
+/Users/rob/Documents/Programming/CodingPractice/csharp/TestProject/obj/Debug/net9.0/TestProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rob/Documents/Programming/CodingPractice/csharp/TestProject/obj/Debug/net9.0/TestProject.AssemblyInfoInputs.cache
+/Users/rob/Documents/Programming/CodingPractice/csharp/TestProject/obj/Debug/net9.0/TestProject.AssemblyInfo.cs
+/Users/rob/Documents/Programming/CodingPractice/csharp/TestProject/obj/Debug/net9.0/TestProject.csproj.CoreCompileInputs.cache
+/Users/rob/Documents/Programming/CodingPractice/csharp/TestProject/obj/Debug/net9.0/TestProject.sourcelink.json
+/Users/rob/Documents/Programming/CodingPractice/csharp/TestProject/obj/Debug/net9.0/TestProject.dll
+/Users/rob/Documents/Programming/CodingPractice/csharp/TestProject/obj/Debug/net9.0/refint/TestProject.dll
+/Users/rob/Documents/Programming/CodingPractice/csharp/TestProject/obj/Debug/net9.0/TestProject.pdb
+/Users/rob/Documents/Programming/CodingPractice/csharp/TestProject/obj/Debug/net9.0/TestProject.genruntimeconfig.cache
+/Users/rob/Documents/Programming/CodingPractice/csharp/TestProject/obj/Debug/net9.0/ref/TestProject.dll
