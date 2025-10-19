@@ -16,7 +16,7 @@ use Getopt::Long;
 
 =head1 NAME
 
-sql_to_csv_chunks.pl – export SQL query results to multiple CSV files (chunked output)
+sql_to_csv_chunks.pl - export SQL query results to multiple CSV files (chunked output)
 
 =head1 SYNOPSIS
 
