@@ -13,9 +13,6 @@ headers = {
 
 DRY_RUN = False
 
-# ------------------------
-# Helper functions
-# ------------------------
 def find_account_by_domain(domain):
     """Search accounts via POST /accounts/search using domains filter."""
     url = f"{BASE_URL}/search"
@@ -35,7 +32,6 @@ def find_account_by_domain(domain):
         print(f"Search failed: {resp.status_code} {resp.text}")
     return None
 
-
 def update_account(account_id, custom_fields):
     """PATCH account with a list of custom_fields."""
     if DRY_RUN:
@@ -51,7 +47,6 @@ def update_account(account_id, custom_fields):
     else:
         print(f"Failed to update account {account_id}: {resp.status_code}, {resp.text}")
         return None
-
 
 def update_from_csv(csv_file):
     """
@@ -82,10 +77,6 @@ def update_from_csv(csv_file):
                 print(f"Found account {account_id} for domain {domain}")
                 update_account(account_id, custom_fields)
 
-
-# ------------------------
-# Main program
-# ------------------------
 if __name__ == "__main__":
     args = sys.argv[1:]
 
