@@ -1,0 +1,102 @@
+<Honda_SSDIF>
+  <Header>
+    <SourceSystemID>ESP</SourceSystemID>
+    <FileDate>2026-03-18</FileDate>
+    <SSDIFVersion>1</SSDIFVersion>
+  </Header>
+  <Data>
+
+    <Record>
+      <RecordCoding>
+        <SequenceNumber>1</SequenceNumber>
+        <DateOfCapture>2026-03-17</DateOfCapture>
+      </RecordCoding>
+
+      <Entity>
+        <EntityURN>123456789</EntityURN>
+      </Entity>
+
+      <EmailBouncebacks>
+        <EmailAddress>user@example.com</EmailAddress>
+        <EmailAddressStatus>ACTV</EmailAddressStatus>
+        <BouncebackReason>X</BouncebackReason>
+        <EmailReadDate>2026-03-17</EmailReadDate>
+        <EmailSentDate>2026-03-15</EmailSentDate>
+      </EmailBouncebacks>
+
+      <ExternalReference>
+        <ExternalSystem>ESP</ExternalSystem>
+        <ExternalRefExtKey>987654</ExternalRefExtKey>
+      </ExternalReference>
+
+      <ContactWithHonda>
+        <ContactType>I</ContactType>
+        <ContactPoint>B</ContactPoint>
+        <ContactMedium>E</ContactMedium>
+        <Source>M</Source>
+        <CRCode>AB99</CRCode>
+        <Comment>CTA_Test_Drive_or_Ride</Comment>
+        <ContactDate>2026-03-17</ContactDate>
+        <InboundMedium>E</InboundMedium>
+        <ResponseType>EMC</ResponseType>
+        <ResponseStatus>V</ResponseStatus>
+        <InboundExecution>X</InboundExecution>
+        <ClickToAction>TDR</ClickToAction>
+        <ClickToActionURL>https://example.com/test-drive</ClickToActionURL>
+        <CampaignDivision>A</CampaignDivision>
+        <ActivityType>B</ActivityType>
+        <SequenceNumber>1234</SequenceNumber>
+        <CellRef>01</CellRef>
+        <OutboundMedium>E</OutboundMedium>
+        <DataSource>AB</DataSource>
+        <OutboundExecution>9</OutboundExecution>
+      </ContactWithHonda>
+    </Record>
+
+    <Record>
+      <RecordCoding>
+        <SequenceNumber>2</SequenceNumber>
+        <DateOfCapture>2026-03-17</DateOfCapture>
+      </RecordCoding>
+
+      <Entity>
+        <EntityURN>987654321</EntityURN>
+      </Entity>
+
+      <EmailBouncebacks>
+        <EmailAddress>other@example.com</EmailAddress>
+        <EmailAddressStatus>ACTV</EmailAddressStatus>
+        <BouncebackReason>X</BouncebackReason>
+        <EmailReadDate>2026-03-17</EmailReadDate>
+        <EmailSentDate>2026-03-15</EmailSentDate>
+      </EmailBouncebacks>
+
+      <ExternalReference>
+        <ExternalSystem>ESP</ExternalSystem>
+        <ExternalRefExtKey>123456</ExternalRefExtKey>
+      </ExternalReference>
+
+      <SubjectPrefs>
+        <SubjectPrefValue>4</SubjectPrefValue>
+        <PrefSuppType>X</PrefSuppType>
+      </SubjectPrefs>
+
+      <ContactWithHonda>
+        <ContactType>I</ContactType>
+        <ContactPoint>B</ContactPoint>
+        <ContactMedium>E</ContactMedium>
+        <Source>M</Source>
+        <CRCode>AB99</CRCode>
+        <Comment>eNews Unsubscribed</Comment>
+        <ContactDate>2026-03-17</ContactDate>
+        <InboundMedium>E</InboundMedium>
+        <ResponseType>X</ResponseType>
+        <ResponseStatus>C</ResponseStatus>
+        <InboundExecution>X</InboundExecution>
+        <ClickToAction></ClickToAction>
+        <ClickToActionURL></ClickToActionURL>
+      </ContactWithHonda>
+    </Record>
+
+  </Data>
+</Honda_SSDIF>
